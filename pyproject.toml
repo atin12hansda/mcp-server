@@ -1,0 +1,20 @@
+[project]
+name = "mcp-server-workspace"
+version = "0.1.0"
+description = "FastMCP + LangGraph RAG workspace (Phase 0)"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "mcp-server",
+    "rag-core",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.workspace]
+members = ["apps/mcp_server", "packages/rag_core"]
+
+[tool.uv.sources]
+mcp-server = { workspace = true }
+rag-core = { workspace = true }
